@@ -67,3 +67,13 @@ var server = app.listen(3000, function () {
   console.log('App listening at http://%s:%s', host, port);
 
 });
+
+// Retrieve
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+});
